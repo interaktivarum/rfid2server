@@ -34,14 +34,22 @@ The project source files are publically available at: http://github.com/interakt
 The server can either be online or limited to a local network. For instructions on how to setup your own local server, please refer to http://apache.org. 
 For instructions how to setup PHP to parse the request data, please refer to http://php.net.
 
-If you do not have a server, HTTP request inspect services such as http://requestb.in are great for testing and verifying your requests. 
+If you do not have your own server, you can use the following default settings in settings.json:
+```
+"server": {
+	"ip": "",
+	"host": "interaktivarum.se",
+	"endpoint": "endpoints/request_dump.php"
+}
+```
+or use a HTTP request inspect service, such as http://requestb.in, for testing and verifying your requests. 
 
 ##Settings: settings.json
 
 * **server** - server settings
 	* **host** *optional (leave empty)* - the server host name, e.g. *interaktivarum.se* or *DESKTOP-FR67JBO*   
 	* **ip** - *optional (leave empty)* - the server IP address, e.g. *46.30.213.125* or *192.168.1.110*
-	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_test.php*
+	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_dump.php*
 * **staticUserData** *optional (leave empty)* - static data to be sent to the server with each message
 	* **userData0** - any number, string, boolean, array, object or null
 	* **userData1** - any number, string, boolean, array, object or null
