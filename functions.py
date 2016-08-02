@@ -1,6 +1,6 @@
 import binascii, requests, json, datetime
 
-def sendToServer(ip,host,endpoint,static_user_data,uid,action):
+def sendRequest(ip,host,endpoint,static_user_data,uid,action):
 
     data = {'userData':static_user_data, 'action':action, 'tagUid':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
 

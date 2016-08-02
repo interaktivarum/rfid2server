@@ -2,7 +2,7 @@
 
 import Adafruit_PN532
 import binascii, sys, time, json
-from functions import sendToServer 
+from functions import sendRequest 
 
 read_sleep = 0.1;
 
@@ -45,12 +45,12 @@ while True:
         #If old tag has been removed
         if uid_last != None:
             #Send HTTP request to server 
-            sendToServer(ip,host,endpoint,static_user_data,uid_last,"remove")
+            sendRequest(ip,host,endpoint,static_user_data,uid_last,"remove")
 
         #If new tag is detected
         if uid != None:
             #Send HTTP request to server   
-            sendToServer(ip,host,endpoint,static_user_data,uid,"touch")
+            sendRequest(ip,host,endpoint,static_user_data,uid,"touch")
 
         #Update uid_last
         uid_last = uid
