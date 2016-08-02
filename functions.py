@@ -2,7 +2,7 @@ import binascii, requests, json, datetime
 
 def sendToServer(ip,host,endpoint,static_user_data,uid,action):
 
-    params = {'userData':static_user_data, 'action':action, 'chipId':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
+    params = {'userData':static_user_data, 'action':action, 'tagUid':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
 
     print('\nSend server request to: ' + ip + " " + host)
 

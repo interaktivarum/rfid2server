@@ -1,6 +1,6 @@
 # nfc2server
 
-nfc2server listens for nfc sensor data and sends a server message when new data is received.
+nfc2server detects NFC/RFID tags and sends server requests on when a new tag is detected or removed.
 
 ##Hardware
 
