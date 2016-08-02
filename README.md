@@ -49,11 +49,8 @@ For instructions how to setup PHP to parse the request data, please refer to htt
 
 ### From the terminal
 * Browse to the nfc2server directory 
-* Run the following command:
-```
-sudo python nfc2server.py
-```
+* Run the following command: ``` sudo python nfc2server.py ```
 
 ### From the Linux desktop
-*Browse to the nfc2server directory
+* Browse to the nfc2server directory
 * Double-click on the nfc2server.py script and select *Run in terminal*
