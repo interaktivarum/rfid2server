@@ -1,11 +1,12 @@
 # nfc2server
 
-nfc2server detects NFC/RFID tags and sends server requests on when a new tag is detected or removed.
+nfc2server detects NFC/RFID tags and sends server requests when a new tag is detected or removed.
 
 ##Hardware
 
 ###Raspberry Pi
 http://raspberrypi.org
+
 Any model should work, but these are the models that are tested and confirmed to be working:
 * Raspberry Pi 3 Model B v1.2
 
