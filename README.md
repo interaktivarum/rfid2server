@@ -58,7 +58,9 @@ For instructions how to setup PHP to parse the request data, please refer to htt
 
 ### Send NFC data
 * Hold a NFC tag close to the PN532 breakout board, the terminal should write: *Found card with UID: xxxx*
-* If a new tag is discovered a request is sent to the server with the following data: 
+* Each time a new tag is detected or an old tag is removed a request is sent to the server with the following data: 
+	* The performed action: *touch* or *remove*
 	* All static user data, as defined in settings.json
 	* The NFC tag UID
 	* The client time in format YYYY-MM-DD HH:MM:SS
+* The terminal writes the server response message. 
