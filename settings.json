@@ -2,9 +2,18 @@
 	"server": {
 		"ip": "",
 		"host": "interaktivarum.se",
-		"endpoint": "endpoints/request_dump.php"
+		"endpoint": "endpoints/request_print.php"
 	},
 	"staticUserData": {
-		"stationId": 1
+		"myNumber": 1,
+		"myString": "Hello",
+		"myArray": [
+			{"arrayItemName":"firstArrayItem"},
+			{"arrayItemName":"secondArrayItem"}
+		],
+		"myObject": {"objectName":"myObjectName"},
+		"myBoolean": true,
+		"myNull": null
 	}
+
 }

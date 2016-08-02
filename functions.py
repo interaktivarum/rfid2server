@@ -8,10 +8,10 @@ def sendToServer(ip,host,endpoint,static_user_data,uid,action):
 
     if ip != '':
         #Post request with ip and host name
-        r = requests.post('http://' + ip + '/' + endpoint, params=json.dumps(params), headers={'host': host})        
+        r = requests.post('http://' + ip + '/' + endpoint, data=json.dumps(params), headers={'host': host})        
     else:
         #Post request with host name
-        r = requests.post('http://' + host + '/' + endpoint, params=json.dumps(params), headers={})
+        r = requests.post('http://' + host + '/' + endpoint, data=json.dumps(params), headers={})
 
     if r.status_code == 200:
         print('Server response:\n' + r.content)

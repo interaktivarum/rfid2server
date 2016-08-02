@@ -39,7 +39,7 @@ If you do not have your own server, you can use the following default settings i
 "server": {
 	"ip": "",
 	"host": "interaktivarum.se",
-	"endpoint": "endpoints/request_dump.php"
+	"endpoint": "endpoints/request_print.php"
 }
 ```
 or use a HTTP request inspect service, such as http://requestb.in, for testing and verifying your requests. 
@@ -49,12 +49,12 @@ or use a HTTP request inspect service, such as http://requestb.in, for testing a
 * **server** - server settings
 	* **host** *optional (leave empty)* - the server host name, e.g. *interaktivarum.se* or *DESKTOP-FR67JBO*   
 	* **ip** - *optional (leave empty)* - the server IP address, e.g. *46.30.213.125* or *192.168.1.110*
-	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_dump.php*
+	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_print.php*
 * **staticUserData** *optional (leave empty)* - static data to be sent to the server with each message
-	* **userData0** - any number, string, boolean, array, object or null
-	* **userData1** - any number, string, boolean, array, object or null
+	* **userData0** - any number, string, boolean, array or object
+	* **userData1** - any number, string, boolean, array or object
 	* **...**
-	* **userDataX** - any number, string, boolean, array, object or null
+	* **userDataX** - any number, string, boolean, array or object
 
 ##Run
 
