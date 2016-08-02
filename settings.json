@@ -1,8 +1,8 @@
 {
 	"server": {
 		"ip": "",
-		"host": "requestb.in",
-		"endpoint": "sprtd9sp"
+		"host": "interaktivarum.se",
+		"endpoint": "endpoints/request_dump.php"
 	},
 	"staticUserData": {
 		"stationId": 1
