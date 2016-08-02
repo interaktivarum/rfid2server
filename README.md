@@ -47,10 +47,18 @@ For instructions how to setup PHP to parse the request data, please refer to htt
 
 ##Run
 
-### From the terminal
+### Start the application
+#### From the terminal
 * Browse to the nfc2server directory 
 * Run the following command: ``` sudo python nfc2server.py ```
 
-### From the Linux desktop
+#### From the Linux desktop
 * Browse to the nfc2server directory
 * Double-click on the nfc2server.py script and select *Run in terminal*
+
+### Send NFC data
+* Hold a NFC tag close to the PN532 breakout board, the terminal should write: *Found card with UID: xxxx*
+* If a new tag is discovered a request is sent to the server with the following data: 
+	* All static user data, as defined in settings.json
+	* The NFC tag UID
+	* The client time in format YYYY-MM-DD HH:MM:SS

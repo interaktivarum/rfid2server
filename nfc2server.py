@@ -4,7 +4,7 @@ import binascii
 import sys
 
 import Adafruit_PN532
-import requests, time, json
+import requests, time, datetime, json
 
 read_sleep = 0.1;
 
@@ -43,6 +43,10 @@ while True:
     uid = pn532.read_passive_target()
     # Try again if no card is available.
     if uid is None:
+
+        #Update uid
+        uid_last = uid
+        
         time.sleep(read_sleep)
         continue
     print('Found card with UID: 0x{0}'.format(binascii.hexlify(uid)))
@@ -54,7 +58,7 @@ while True:
         uid_last = uid
         
         #Send user data to server   
-        params = {'static':static_user_data, 'dynamic':{'chipId':binascii.hexlify(uid)}}
+        params = {'static':static_user_data, 'dynamic':{'chipId':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}}
 
         if ip != '':
             #Post request with ip and host name
