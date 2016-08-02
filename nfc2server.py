@@ -22,14 +22,14 @@ pn532.SAM_configuration()
 
 #Read json
 print("Data folder: " + sys.path[0])
-with open(sys.path[0]+'/data.json') as data_file:
-    data = json.load(data_file)
+with open(sys.path[0]+'/settings.json') as data_file:
+    settings = json.load(data_file)
 
 #Set user variables
-ip = data["server"]["ip"]
-host = data["server"]["host"]
-endpoint = data["server"]["endpoint"]
-static_user_data = data["staticUserData"];
+ip = settings["server"]["ip"]
+host = settings["server"]["host"]
+endpoint = settings["server"]["endpoint"]
+static_user_data = settings["staticUserData"];
 uid = None;
 uid_last = uid;
 

@@ -1,7 +1,7 @@
 {
 	"server": {
-		"host": "DESKTOP-FR67JBO",
 		"ip": "192.168.1.110",
+		"host": "DESKTOP-FR67JBO",
 		"endpoint": "post.php"
 	},
 	"staticUserData": {
