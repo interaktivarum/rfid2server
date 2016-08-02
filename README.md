@@ -33,7 +33,7 @@ Although this is not a Minecraft related project, Adafruit provides a great Mine
 The project source files are publically available at: http://github.com/interaktivarum/nfc2server. No installation is needed, just download the files to your prefered directory.
 
 ###Server
-The server can either be online or limited to a local network. For instructions on how to setup your own local server, please refer to http://apache.org. 
+The server can either be online or on a local network. For instructions on how to setup your own local server, please refer to http://apache.org. 
 For instructions how to setup PHP to parse the request data, please refer to http://php.net.
 
 If you do not have your own server, you can use the following default settings in settings.json:
