@@ -2,19 +2,31 @@ import binascii, requests, json, datetime
 
 def sendToServer(ip,host,endpoint,static_user_data,uid,action):
 
-    params = {'userData':static_user_data, 'action':action, 'tagUid':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
+    data = {'userData':static_user_data, 'action':action, 'tagUid':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
 
     print('\nSend server request to: ' + ip + " " + host)
 
-    if ip != '':
-        #Post request with ip and host name
-        r = requests.post('http://' + ip + '/' + endpoint, data=json.dumps(params), headers={'host': host})        
-    else:
-        #Post request with host name
-        r = requests.post('http://' + host + '/' + endpoint, data=json.dumps(params), headers={})
+    url = ''
+    headers = {}
+    r = None
 
-    if r.status_code == 200:
-        print('Server response:\n' + r.content)
+    if ip != '':
+        url = 'http://' + ip + '/' + endpoint
+        headers = {'host': host}
     else:
-        print 'REQUEST ERROR! Status code: ' + str(r.status_code)
-        print('Server response:\n' + r.content)
+        url = 'http://' + host + '/' + endpoint
+
+    #Post request with host name
+    try:
+        r = requests.post(url, data=json.dumps(data), headers=headers, timeout=3)
+    except requests.exceptions.ConnectionError:
+        print "Network connection error"
+    except requests.exceptions.Timeout:
+        print "Timeout exception"
+                
+    if r != None:
+        if r.status_code == 200:
+            print('Server response:\n' + r.content)
+        else:
+            print 'REQUEST ERROR! Status code: ' + str(r.status_code)
+            print('Server response:\n' + r.content)
