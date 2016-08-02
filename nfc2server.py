@@ -44,12 +44,12 @@ while True:
 
         #If old tag has been removed
         if uid_last != None:
-            #Send request to server 
+            #Send HTTP request to server 
             sendToServer(ip,host,endpoint,static_user_data,uid_last,"remove")
 
         #If new tag is detected
         if uid != None:
-            #Send request to server   
+            #Send HTTP request to server   
             sendToServer(ip,host,endpoint,static_user_data,uid,"touch")
 
         #Update uid_last

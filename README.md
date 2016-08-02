@@ -1,6 +1,6 @@
 # nfc2server
 
-nfc2server detects NFC/RFID tags and sends server requests when a new tag is detected or removed.
+nfc2server detects NFC/RFID tags and sends HTTP requests when a new tag is detected or removed.
 
 ##Hardware
 
@@ -34,12 +34,14 @@ The project source files are publically available at: http://github.com/interakt
 The server can either be online or limited to a local network. For instructions on how to setup your own local server, please refer to http://apache.org. 
 For instructions how to setup PHP to parse the request data, please refer to http://php.net.
 
+If you do not have a server, HTTP request inspect services such as http://requestb.in are great for testing and verifying your requests. 
+
 ##Settings: settings.json
 
 * **server** - server settings
 	* **host** *optional (leave empty)* - the server host name, e.g. *interaktivarum.se* or *DESKTOP-FR67JBO*   
 	* **ip** - *optional (leave empty)* - the server IP address, e.g. *46.30.213.125* or *192.168.1.110*
-	* **endpoint** - the endpoint for the request, e.g. *endpoints/request_test.php*
+	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_test.php*
 * **staticUserData** *optional (leave empty)* - static data to be sent to the server with each message
 	* **userData0** - any number, string, boolean, array, object or null
 	* **userData1** - any number, string, boolean, array, object or null
@@ -59,7 +61,7 @@ For instructions how to setup PHP to parse the request data, please refer to htt
 
 ### Send NFC data
 * Hold a NFC tag close to the PN532 breakout board, the terminal should write: *Found card with UID: xxxx*
-* Each time a new tag is detected or an old tag is removed a request is sent to the server with the following data: 
+* Each time a new tag is detected or an old tag is removed an HTTP request is sent to the server with the following data: 
 	* The performed action: *touch* or *remove*
 	* All static user data, as defined in settings.json
 	* The NFC tag UID
