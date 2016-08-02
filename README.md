@@ -4,6 +4,8 @@ nfc2server detects NFC/RFID tags and sends HTTP requests when a new tag is detec
 
 ##Hardware
 
+The following hardware is needed in order to run the application.
+
 ###Raspberry Pi
 http://raspberrypi.org
 
