@@ -53,7 +53,14 @@ while True:
         
         #Send user data to server   
         params = {'static':static_user_data, 'dynamic':{'chipId':binascii.hexlify(uid)}}
-        r = requests.post('http://' + ip + '/' + endpoint, params=json.dumps(params), headers={'host': host})
+
+        if ip != '':
+            #Post request with ip and host name
+            r = requests.post('http://' + ip + '/' + endpoint, params=json.dumps(params), headers={'host': host})        
+        else:
+            #Post request with host name
+            r = requests.post('http://' + host + '/' + endpoint, params=json.dumps(params), headers={})
+
         if r.status_code == 200:
             print r.content
         else:

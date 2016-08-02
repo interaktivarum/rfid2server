@@ -1,10 +1,10 @@
 {
 	"server": {
-		"ip": "127.0.0.1",
-		"host": "SERVER_HOST_NAME",
-		"endpoint": "request_test.php"
+		"ip": "192.168.1.110",
+		"host": "DESKTOP-FR67JBO",
+		"endpoint": "post.php"
 	},
 	"staticUserData": {
-		"stationId": 2
+		"stationId": 1
 	}
 }
