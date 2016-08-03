@@ -15,8 +15,11 @@ Any model should work, but these are the models that are tested and confirmed to
 ###Adafruit PN532 NFC/RFID controller breakout board
 http://www.adafruit.com/products/364
 
+Any version should work, but these are the models that are tested and confirmed to be working:
+* Adafruit PN532 NFC/RFID controller breakout board - v1.6
+
 ###NFC/RFID tag
-Several tag types should work; these are the tag types that are tested and confirmed to work:
+Several tag types should work; these are the tag types that are tested and confirmed to be working:
 * Adafruit 13.56MHz RFID/NFC Clear Tag - 1KB
 * Adafruit 13.56MHz RFID/NFC Card - 1KB
 * Adafruit Micro NFC/RFID Transponder - NTAG203 13.56MHz
