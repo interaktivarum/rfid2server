@@ -24,8 +24,9 @@ Several tag types should work; these are the tag types that are tested and confi
 * Adafruit 13.56MHz RFID/NFC Card - 1KB
 * Adafruit Micro NFC/RFID Transponder - NTAG203 13.56MHz
 
-###*GPIO breakout wires and soldering equipment*
-In order to connect the PN532 breakout board to the Raspberry Pi you need six GPIO breakout wires and preferably need to do some soldering. See below for details and setup instructions.
+###GPIO breakout wires and soldering equipment
+In order to connect the PN532 breakout board to the Raspberry Pi you need six GPIO breakout wires.
+For the best result, you also need to do some basic soldering - if you are new to soldering, see this great guide by Adafruit: http://learn.adafruit.com/adafruit-guide-excellent-soldering
 
 ##Setup
 
