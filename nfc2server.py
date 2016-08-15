@@ -6,13 +6,9 @@ from functions import sendRequest
 
 read_sleep = 0.1;
 
-# Create an instance of the PN532 class.
+# Instantiate and configure the PN532
 pn532 = Adafruit_PN532.PN532(cs=18, sclk=25, mosi=23, miso=24)
-
-# Call begin to initialize communication with the PN532.
 pn532.begin()
-
-# Configure PN532 to communicate with MiFare cards.
 pn532.SAM_configuration()
 
 #Read json
@@ -31,9 +27,10 @@ uid = None;
 uid_last = uid;
 
 # Main loop to detect cards and send server requests
-print('Waiting for MiFare card...')
+print('Application running')
 while True:
-    # Check if a card is available to read.
+    
+    # Read card, if available
     uid = pn532.read_passive_target()
 
     if uid != None:
