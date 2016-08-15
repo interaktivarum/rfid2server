@@ -6,15 +6,15 @@ nfc2server is an open-source software for the Raspberry Pi that detects NFC/RFID
 nfc2server is developed by [Interaktiva rum (Interactive rooms)](http://www.interaktivarum.se/en) and is initiated and funded by [The Nordic Museum](http://www.nordiskamuseet.se/en) in Sweden.
 
 ###Museum exhibitions
-nfc2server is designed and developed as part of a new interactive exhibition in The Nordic Museum inaugurated 2016.
+nfc2server is designed and developed as part of a new interactive exhibition inaugurated 2016 in The Nordic Museum .
 When entering the exhibition, each visitor gets a LED candlestick that she carries with her throughtout the exhibition and uses to switch on and off lights by simply holding it against "light switch surfaces".
 The candlestick is simply hacked by placing and hiding a micro NFC tag next to the LED light.
 The active hardware (see list below) is hidden behind the "light switch surfaces" and detects whenever a tag/candlestick is held against it.
 When a NFC tag is detected a message (HTTP request) is sent to the server with tag and station/surface IDs, upon which the correct action can be carried out, e.g. *turn on the red spotlight*.
 
-*Note*: nfc2server does *not* provide the server side code to receive and handle the HTTP requests - it simply sends a message to the server with the information specified by the user. 
-
 Any museum/science center (or simply anyone that wants to) is encouraged to download the software code and use it in their own interactive projects! If you do, please let us know - both Interaktiva rum and The Nordic Museum will be happy to hear about your project and how our code has been utilized!
+
+*Note*: nfc2server does not provide the server side code to receive and handle the HTTP requests - it simply sends a message to the server with the information specified by the user. 
 
 ##Hardware
 
