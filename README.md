@@ -1,17 +1,17 @@
 # nfc2server
 
-nfc2server is an open-source software for the Raspberry Pi, that detects NFC/RFID tags and sends HTTP requests when a new tag is detected or removed.
+nfc2server is an open-source software for the Raspberry Pi that detects NFC/RFID tags and sends HTTP requests when a new tag is detected or removed.
 
 ##About
-nfc2server is developed by [Interaktiva rum (Interactive rooms)](http://www.interaktivarum.se/en) and is initiated and funded by [The Nordic Museum in Sweden](http://www.nordiskamuseet.se/en).
+nfc2server is developed by [Interaktiva rum (Interactive rooms)](http://www.interaktivarum.se/en) and is initiated and funded by [The Nordic Museum](http://www.nordiskamuseet.se/en) in Sweden.
 
 ###Museum exhibitions
-nfc2server was designed and developed as part of a new interactive exhibition in The Nordic Museum inaugurated 2016.
-When entering the exhibition, each visitor gets a LED candlestick that she carries with her throughtout the exhibition and uses to switch on and off lights by simply holding it against certain "light switch surfaces".
-For the Nordic Museum exhibition, the candlestick is simply hacked by placing and hiding a micro NFC tag next to the LED light.
+nfc2server is designed and developed as part of a new interactive exhibition in The Nordic Museum inaugurated 2016.
+When entering the exhibition, each visitor gets a LED candlestick that she carries with her throughtout the exhibition and uses to switch on and off lights by simply holding it against "light switch surfaces".
+The candlestick is simply hacked by placing and hiding a micro NFC tag next to the LED light.
 The active hardware (see list below) is hidden behind the "light switch surfaces" and detects whenever a tag/candlestick is held against it, upon which a message is sent to the server with tag and station/surface IDs.  
 
-Any museum/science center (or simply anyone that wants to) is encouraged to download the software code and use it in their own projects! If you do, please let us know - both Interaktiva rum and The Nordic Museum will be happy to hear about your project and how our application has been utilized!
+Any museum/science center (or simply anyone that wants to) is encouraged to download the software code and use it in their own interactive projects! If you do, please let us know - both Interaktiva rum and The Nordic Museum will be happy to hear about your project and how our code has been utilized!
 
 ##Hardware
 
