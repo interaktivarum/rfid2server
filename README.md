@@ -102,14 +102,16 @@ or use a HTTP request inspect service, such as http://requestb.in, for testing a
 * Browse to the nfc2server directory
 * Double-click on the nfc2server.py script and select *Run in terminal*
 
+The terminal should output: Application is running. Ready.
+
 ### Send NFC data
-* Hold a NFC tag close to the PN532 breakout board, the terminal should write: *Found card with UID: xxxx*
+* Hold a NFC tag close to the PN532 breakout board, the terminal should output: *Found card with UID: xxxx*
 * Each time a new tag is detected or an old tag is removed an HTTP request is sent to the server with the following data: 
 	* The performed action: *touch* or *remove*
 	* All static user data, as defined in settings.json
 	* The NFC tag UID
 	* The client time in format YYYY-MM-DD HH:MM:SS
-* The terminal writes the server response message.
+* The terminal outputs the server response message.
 
 ##Contact
 
@@ -121,5 +123,5 @@ If you have any requests or suggestions on how nfc2server can be improved or eve
 
 ###Share your project
 Are you using nfc2server in your own project? Great! We will be happy to hear about your work and to help share your project!
-Please send us an email to martin@interaktivarum.se
+Please send an email to martin@interaktivarum.se
 
