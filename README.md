@@ -81,7 +81,7 @@ or use a HTTP request inspect service, such as http://requestb.in, for testing a
 ### Start the application
 #### From the terminal
 * Browse to the nfc2server directory 
-* Run the following command: ```python sudo python nfc2server.py ```
+* Run the following command: ``` sudo python nfc2server.py ```
 
 #### From the Linux desktop
 * Browse to the nfc2server directory
