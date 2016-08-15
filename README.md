@@ -45,7 +45,17 @@ For the best result, you also need to do some basic soldering - if you are new t
 ##Setup
 
 ###Raspberry Pi and PN532 breakout board
-Although this is not a Minecraft related project, Adafruit provides a great Minecraft related beginners tutorial on how to download and setup the Raspberry Pi with the PN532 breakout board: http://learn.adafruit.com/raspberry-pi-nfc-minecraft-blocks. Please follow the tutorial's steps to properly setup the hardware and dependency libraries. 
+Although this is not a Minecraft related project, Adafruit provides a great Minecraft related beginners tutorial on how to download and setup the Raspberry Pi with the PN532 breakout board: http://learn.adafruit.com/raspberry-pi-nfc-minecraft-blocks. 
+The following terminal commands should properly install the dependency libraries
+```
+sudo apt-get update
+sudo apt-get install build-essential python-dev git
+cd ~
+git clone https://github.com/adafruit/Adafruit_Python_PN532.git
+cd Adafruit_Python_PN532
+sudo python setup.py install
+``` 
+but we recommend to follow the full tutorial instrucions to properly setup the hardware and dependencies.
 
 ###Download the source files
 The project source files are publically available at: http://github.com/interaktivarum/nfc2server. No installation is needed, just download the files to your prefered directory.
@@ -55,7 +65,7 @@ The server can either be online or on a local network. For instructions on how t
 For instructions how to setup PHP to parse the request data, please refer to http://php.net.
 
 If you do not have your own server, you can use the following default settings in settings.json:
-```
+```javascript
 "server": {
 	"ip": "",
 	"host": "interaktivarum.se",
