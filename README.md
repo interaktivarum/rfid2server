@@ -12,7 +12,7 @@ The candlestick is simply hacked by placing and hiding a micro NFC tag next to t
 The active hardware (see list below) is hidden behind the "light switch surfaces" and detects whenever a tag/candlestick is held against it.
 When a NFC tag is detected a message (HTTP request) is sent to the server with tag and station/surface IDs, upon which the correct action can be carried out, e.g. *turn on the red spotlight*.
 
-Any museum/science center (or simply anyone that wants to) is encouraged to download the software code and use it in their own interactive projects! If you do, please let us know - both Interaktiva rum and The Nordic Museum will be happy to hear about your project and how our code has been utilized!
+Any museum/science center (or simply anyone that wants to) is encouraged to download the software code and use it in their own interactive projects! If you do, please let us know - we will be happy to hear about your work and help share your project!
 
 *Note*: nfc2server does not provide the server side code to receive and handle the HTTP requests - it simply sends a message to the server with the information specified by the user. 
 
@@ -94,4 +94,17 @@ or use a HTTP request inspect service, such as http://requestb.in, for testing a
 	* All static user data, as defined in settings.json
 	* The NFC tag UID
 	* The client time in format YYYY-MM-DD HH:MM:SS
-* The terminal writes the server response message. 
+* The terminal writes the server response message.
+
+##Contact
+
+###Bug reports
+Please use the Issues tab on Github https://www.github.com/interaktivarum/nfc2server/issues to report any bugs or issues that you encounter.
+
+###Feature requests
+If you have any requests or suggestions on how nfc2server can be improved or even customized to suit your project needs, please send an email to: martin@interaktivarum.se 
+
+###Share your project
+Are you using nfc2server in your own project? Great! We will be happy to hear about your work and to help share your project!
+Please send us an email to martin@interaktivarum.se
+
