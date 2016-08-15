@@ -60,6 +60,11 @@ but we recommend to follow the full tutorial to properly setup the hardware and 
 ###Download the source files
 The project source files are publically available at: http://github.com/interaktivarum/nfc2server. No installation is needed, just download the files to your prefered directory.
 
+Clone with Git:
+```
+git clone https://github.com/interaktivarum/nfc2server.git
+``` 
+
 ###Server
 The server can either be online or on a local network. For instructions on how to setup your own local server, please refer to http://apache.org. 
 For instructions how to setup PHP to parse the request data, please refer to http://php.net.
