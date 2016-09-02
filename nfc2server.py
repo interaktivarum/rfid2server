@@ -33,20 +33,19 @@ while True:
     # Read card, if available
     uid = pn532.read_passive_target()
 
-    if uid != None:
-        print('Found card with UID: 0x{0}'.format(binascii.hexlify(uid)))
-
     #If tag uid has changed from previous iteration 
     if uid_last != uid:
 
-        #If old tag has been removed
+        # If old tag has been removed
         if uid_last != None:
-            #Send HTTP request to server 
+            print('Removed card with UID: 0x{0}'.format(binascii.hexlify(uid_last)))
+            # Send HTTP request to server 
             sendRequest(ip,host,endpoint,static_user_data,uid_last,"remove")
 
-        #If new tag is detected
+        # If new tag is detected
         if uid != None:
-            #Send HTTP request to server   
+            print('Found card with UID: 0x{0}'.format(binascii.hexlify(uid)))
+            # Send HTTP request to server  
             sendRequest(ip,host,endpoint,static_user_data,uid,"touch")
 
         #Update uid_last
