@@ -7,12 +7,12 @@ def sendRequest(ip,host,endpoint,static_user_data,uid,action):
     print('\nSend server request to: ' + ip + " " + host)
 
     url = ''
-    headers = {}
+    headers = {'Content-Type': 'application/json', 'X-TagUID': uid}
     r = None
 
     if ip != '':
         url = 'http://' + ip + '/' + endpoint
-        headers = {'host': host}
+        headers = {'host': host, 'Content-Type': 'application/json', 'X-TagUID': uid}
     else:
         url = 'http://' + host + '/' + endpoint
 

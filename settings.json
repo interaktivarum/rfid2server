@@ -1,19 +1,12 @@
 {
 	"server": {
 		"ip": "",
-		"host": "interaktivarum.se",
-		"endpoint": "endpoints/request_print.php"
+		"host": "TBD",
+		"endpoint": "TBD"
 	},
 	"staticUserData": {
-		"myNumber": 1,
-		"myString": "Hello",
-		"myArray": [
-			{"arrayItemName":"firstArrayItem"},
-			{"arrayItemName":"secondArrayItem"}
-		],
-		"myObject": {"objectName":"myObjectName"},
-		"myBoolean": true,
-		"myNull": null
+		"room": 1,
+		"station": 1,
 	}
 
 }
