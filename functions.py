@@ -1,10 +1,11 @@
 import binascii, requests, json, datetime
 
-def sendRequest(ip,host,endpoint,static_user_data,uid,action):
+def sendRequest(ip,host,endpoint,static_user_data,uid,action,print_log):
 
     data = {'userData':static_user_data, 'action':action, 'tagUid':binascii.hexlify(uid), 'time':datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')}
 
-    print('\nSend server request to: ' + ip + " " + host)
+    if print_log["request"]:
+        print('\nSend server request to: ' + ip + " " + host)
 
     url = ''
     headers = {}
@@ -20,13 +21,17 @@ def sendRequest(ip,host,endpoint,static_user_data,uid,action):
     try:
         r = requests.post(url, data=json.dumps(data), headers=headers, timeout=3)
     except requests.exceptions.ConnectionError:
-        print "Network connection error"
+        if print_log["request"]:
+            print "Network connection error"
     except requests.exceptions.Timeout:
-        print "Timeout exception"
+        if print_log["request"]:
+            print "Timeout exception"
                 
     if r != None:
         if r.status_code == 200:
-            print('Server response:\n' + r.content)
+            if print_log["request"]:
+                print('Server response:\n' + r.content)
         else:
-            print 'REQUEST ERROR! Status code: ' + str(r.status_code)
-            print('Server response:\n' + r.content)
+            if print_log["request"]:
+                print 'REQUEST ERROR! Status code: ' + str(r.status_code)
+                print('Server response:\n' + r.content)

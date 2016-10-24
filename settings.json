@@ -4,6 +4,10 @@
 		"host": "interaktivarum.se",
 		"endpoint": "endpoints/request_print.php"
 	},
+	"printLog": {
+		"tag": true,
+		"request": true
+	},
 	"staticUserData": {
 		"myNumber": 1,
 		"myString": "Hello",

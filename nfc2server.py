@@ -20,7 +20,8 @@ with open(sys.path[0]+'/settings.json') as data_file:
 ip = settings["server"]["ip"]
 host = settings["server"]["host"]
 endpoint = settings["server"]["endpoint"]
-static_user_data = settings["staticUserData"];
+print_log = settings["printLog"]
+static_user_data = settings["staticUserData"]
 
 #Tag uid variables
 uid = None;
@@ -34,7 +35,8 @@ while True:
     uid = pn532.read_passive_target()
 
     if uid != None:
-        print('Found card with UID: 0x{0}'.format(binascii.hexlify(uid)))
+        if print_log["tag"]:
+            print('Found card with UID: 0x{0}'.format(binascii.hexlify(uid)))
 
     #If tag uid has changed from previous iteration 
     if uid_last != uid:
@@ -42,12 +44,12 @@ while True:
         #If old tag has been removed
         if uid_last != None:
             #Send HTTP request to server 
-            sendRequest(ip,host,endpoint,static_user_data,uid_last,"remove")
+            sendRequest(ip,host,endpoint,static_user_data,uid_last,"remove",print_log)
 
         #If new tag is detected
         if uid != None:
             #Send HTTP request to server   
-            sendRequest(ip,host,endpoint,static_user_data,uid,"touch")
+            sendRequest(ip,host,endpoint,static_user_data,uid,"touch",print_log)
 
         #Update uid_last
         uid_last = uid
