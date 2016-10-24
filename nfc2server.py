@@ -27,7 +27,7 @@ uid = None;
 uid_last = uid;
 
 # Main loop to detect cards and send server requests
-print('Application running')
+print('Application is running. Ready.')
 while True:
     
     # Read card, if available
