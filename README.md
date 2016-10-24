@@ -85,6 +85,9 @@ or use a HTTP request inspect service, such as http://requestb.in, for testing a
 	* **host** *optional (leave empty)* - the server host name, e.g. *interaktivarum.se* or *DESKTOP-FR67JBO*   
 	* **ip** - *optional (leave empty)* - the server IP address, e.g. *46.30.213.125* or *192.168.1.110*
 	* **endpoint** - the endpoint (without the server host name) for the HTTP request, e.g. *endpoints/request_print.php*
+* **printLog** - print log settings
+	* **tag** - Print log when a tag is found
+	* **request** - Print request and server data, including server responses and errors 
 * **staticUserData** *optional (leave empty)* - static data to be sent to the server with each message
 	* **userData0** - any number, string, boolean, array or object
 	* **userData1** - any number, string, boolean, array or object
