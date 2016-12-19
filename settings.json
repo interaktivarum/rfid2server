@@ -1,12 +1,11 @@
 {
 	"server": {
-		"ip": "",
-		"host": "TBD",
-		"endpoint": "TBD"
+		"ip": "127.0.0.1",
+		"host": "localhost",
+		"endpoint": "api/touches"
 	},
 	"staticUserData": {
 		"room": 1,
-		"station": 1,
+		"station": 1
 	}
-
 }
