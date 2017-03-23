@@ -58,7 +58,7 @@ sudo python setup.py install
 but we recommend to follow the full tutorial to properly setup the hardware and dependencies.
 
 ### Download the source files
-The project source files are publically available at: http://github.com/interaktivarum/nfc2server. No installation is needed, just download the files to your prefered directory.
+The project source files are publically available at: http://github.com/nordicmuseum/nfc2server. No installation is needed, just download the files to your prefered directory.
 
 Clone with Git:
 ```
