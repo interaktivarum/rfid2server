@@ -1,4 +1,5 @@
 Copyright (c) 2016 Interaktiva rum Sverige (Interactive rooms Sweden) http://www.interaktivarum.se/en
+Additions (c) 2016–2017 Nordiska museet (Nordic Museum)
 
 The project is initiated and funded by The Nordic Museum in Sweden http://www.nordiskamuseet.se/en
 
