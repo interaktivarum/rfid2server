@@ -107,9 +107,9 @@ The terminal should output: Application is running. Ready.
 Please use the Issues tab on Github https://www.github.com/interaktivarum/nfc2server/issues to report any bugs or issues that you encounter.
 
 ### Feature requests
-If you have any requests or suggestions on how nfc2server can be improved or even customized to suit your project needs, please send an email to: martin@interaktivarum.se or aron.ambrosiani@nordiskamuseet.se.
+If you have any requests or suggestions on how nfc2server can be improved or even customized to suit your project needs, please send an email to: martin@interaktivarum.se, robert.ziherl@nordiskamuseet.se and/or aron.ambrosiani@nordiskamuseet.se.
 
 ### Share your project
 Are you using nfc2server in your own project? Great! We will be happy to hear about your work and to help share your project!
-Please send an email to martin@interaktivarum.se or aron.ambrosiani@nordiskamuseet.se.
+Please send an email to martin@interaktivarum.se, robert.ziherl@nordiskamuseet.se and/or aron.ambrosiani@nordiskamuseet.se.
 
